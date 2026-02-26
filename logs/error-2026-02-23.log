@@ -1,0 +1,24 @@
+2026-02-23 13:59:09 [main] WARN  [] org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-23 13:59:12 [main] WARN  [] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-23 13:59:13 [main] WARN  [] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 1bf00afe-a1c7-47a0-a34a-3594351a955d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-02-23 14:03:17 [main] WARN  [] org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-23 14:03:21 [main] WARN  [] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-23 14:03:22 [main] WARN  [] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 04db36f8-6787-499e-b6a2-3dc0cdb92fc7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-02-23 14:13:39 [restartedMain] WARN  [] org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-23 14:13:41 [restartedMain] WARN  [] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-23 14:13:42 [restartedMain] WARN  [] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 76c0baf9-b056-44d0-aa15-19506760146a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
