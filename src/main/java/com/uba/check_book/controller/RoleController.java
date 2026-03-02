@@ -28,19 +28,19 @@ public class RoleController {
         return roleService.save(roleDTO);
     }
 
-    @PutMapping("/id")
+    @PutMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN') and hasAuthority('ROLE:UPDATE')")
     public RoleDTO updateRole(@PathVariable Long id, @RequestBody RoleDTO roleDTO){
         return roleService.save(roleDTO);
     }
 
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN') and hasAuthority('ROLE:READ')")
     public RoleDTO getRoleById(@PathVariable Long id){
         return roleService.findById(id);
     }
 
-    @DeleteMapping("/id")
+    @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN') and hasAuthority('ROLE:DELETE')")
     public void deleteRoleById(@PathVariable Long id){
         roleService.deleteById(id);
