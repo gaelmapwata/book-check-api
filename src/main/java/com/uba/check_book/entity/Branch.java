@@ -21,7 +21,7 @@ public class Branch {
     private long id;
 
     private String label;
-    private int solId;
+    private Integer solId;
     private LocalDateTime deleteAt;
 
     @ManyToOne

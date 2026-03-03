@@ -29,11 +29,8 @@ public class PermissionController {
 
     @GetMapping
     @PreAuthorize("hasRole('ADMIN') and hasAuthority('PERMISSION:READ')")
-    public ResponseEntity<List<PermissionResponseDTO>> index(
-            @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "10") int limit
-    ) {
-        List<PermissionResponseDTO> response = permissionService.findAll(page, limit);
+    public ResponseEntity<List<PermissionResponseDTO>> index() {
+        List<PermissionResponseDTO> response = permissionService.findAll();
         return ResponseEntity.ok(response);
     }
 

@@ -113,16 +113,8 @@ public class UserService {
         return userRepository.findById(id);
     }
 
-    public List<UserResponseDTO> findAll(int page, int limit) {
-        if (limit == -1) {
-            return userRepository.findAll(Sort.by("email"))
-                    .stream()
-                    .map(userMapper::toDTO)
-                    .toList();
-        }
-
-        PageRequest pageRequest = PageRequest.of(page - 1, limit, Sort.by("email"));
-        return userRepository.findAll(pageRequest)
+    public List<UserResponseDTO> findAll() {
+        return userRepository.findAll(Sort.by("email"))
                 .stream()
                 .map(userMapper::toDTO)
                 .toList();

@@ -57,16 +57,8 @@ public class PermissionService {
         return permissionRepository.findById(id);
     }
 
-    public List<PermissionResponseDTO>findAll(int page, int limit){
-        if (limit == -1) {
-            return permissionRepository.findAll(Sort.by("slug"))
-                    .stream()
-                    .map(permissionMapper::toDTO)
-                    .toList();
-        }
-
-        PageRequest pageRequest = PageRequest.of(page - 1, limit, Sort.by("slug"));
-        return permissionRepository.findAll(pageRequest)
+    public List<PermissionResponseDTO>findAll(){
+        return permissionRepository.findAll(Sort.by("slug"))
                 .stream()
                 .map(permissionMapper::toDTO)
                 .toList();

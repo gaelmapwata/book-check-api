@@ -26,11 +26,8 @@ public class UserController {
 
     @GetMapping
     @PreAuthorize("hasRole('ADMIN') and hasAuthority('USER:READ')")
-    public ResponseEntity<List<UserResponseDTO>> index(
-            @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "10") int limit
-    ) {
-        List<UserResponseDTO> response = userService.findAll(page, limit);
+    public ResponseEntity<List<UserResponseDTO>> index() {
+        List<UserResponseDTO> response = userService.findAll();
         return ResponseEntity.ok(response);
     }
 
