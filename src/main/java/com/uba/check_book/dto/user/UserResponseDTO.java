@@ -13,6 +13,7 @@ public class UserResponseDTO {
     private Long id;
     private String email;
     private boolean locked;
+    private boolean is_validated;
     private int totalLoginAttempt;
     private String branchName;
     private List<String> roles;

@@ -97,6 +97,7 @@ public class UserService {
         User validator = new User();
         validator.setId(validatorUserId);
         user.setValidatedBy(validator);
+        user.setIsValidated(true);
         return userMapper.toDTO(userRepository.save(user));
     }
 

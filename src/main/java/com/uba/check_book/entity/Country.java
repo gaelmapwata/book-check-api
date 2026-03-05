@@ -2,6 +2,8 @@ package com.uba.check_book.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -24,6 +26,11 @@ public class Country {
     @Column(unique = true)
     private String telPrefixNum;
     private LocalDateTime deleteAt;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "country")
     private List<Bank> banks;

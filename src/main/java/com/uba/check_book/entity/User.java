@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -27,6 +29,13 @@ public class User {
     private String password;
     private  int totalLoginAttempt;
     private boolean locked;
+    @Column(name = "is_validated")
+    private Boolean isValidated = false;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
     private LocalDateTime deleteAt;
 
     @ManyToOne

@@ -37,6 +37,7 @@ public class UserMapper {
         dto.setId(user.getId());
         dto.setEmail(user.getEmail());
         dto.setLocked(user.isLocked());
+        dto.set_validated(user.getIsValidated());
         dto.setTotalLoginAttempt(user.getTotalLoginAttempt());
         if (user.getBranch() != null) {
             dto.setBranchName(user.getBranch().getLabel());

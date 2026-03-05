@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -20,6 +22,11 @@ public class Resource {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
     private LocalDateTime deleteAt;
 
     @OneToMany(mappedBy = "resource")

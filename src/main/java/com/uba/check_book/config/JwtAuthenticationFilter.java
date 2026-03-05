@@ -48,6 +48,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             if (jwtService.isTokenValid(jwt, expectedType)) {
 
                 String userIdStr = jwtService.extractUserId(jwt);
+                request.setAttribute("userId", Long.parseLong(userIdStr));
 
                 UserPrincipal userPrincipal =
                         (UserPrincipal) userDetailsService.loadUserByUsername(userIdStr);
